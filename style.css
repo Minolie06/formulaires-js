@@ -1,0 +1,79 @@
+:root {
+  --color-accent: #ffc300;
+  --color-accent-light: #ffd60a;
+  --color-bg-light: #003566;
+  --color-bg-medium: #001d3d;
+  --color-bg-dark: #000814;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-accent);
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+a {
+  color: var(--color-accent);
+  font-size: 24px;
+  text-decoration: none;
+  height: 100%;
+  display: block;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 80px auto 0 auto;
+  max-width: 1200px;
+}
+
+.projects-grid .project-item {
+  border-radius: 12px;
+  /* background-color: var(--color-bg-light); */
+  /* border: 2px solid var(--color-bg-light); */
+  background-image: linear-gradient(to right, var(--color-bg-light) 50%, var(--color-accent) 50%, var(--color-accent-light));
+  background-size: 200%;
+  transition: 0.6s ease-out;
+
+}
+
+.projects-grid .project-item:hover {
+  background-position: 100%;
+  /* background-color: var(--color-bg-medium); */
+  /* border-color: var(--color-accent-light); */
+}
+.projects-grid .project-item:hover a {
+  color: var(--color-bg-light);
+  transition: color, 0.6s;
+}
+
+
+.formBloc .formGroupe .buttonSub {
+  display: block;
+  width: auto;
+  padding: 15px 60px;
+  border: 3px solid #8b97d7;
+  border-radius: 999px;
+  background-image: linear-gradient(to right, transparent 50%, #5260ad 50%, #8b97d7);
+  background-size: 200%;
+  color: #8b97d7;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.formBloc .formGroupe .buttonSub:hover {
+  color: #fff;
+  background-position: 100%;
+  border: 3px solid #fff;
+}
